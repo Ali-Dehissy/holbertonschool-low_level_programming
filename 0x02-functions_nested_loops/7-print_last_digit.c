@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_sign - prints the sign of a number
+ * print_last_digit - prints the last digit
  * @n: The character to print
  * Return: On success void.
  */

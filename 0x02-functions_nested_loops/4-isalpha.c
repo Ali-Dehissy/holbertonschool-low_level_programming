@@ -5,8 +5,7 @@
  * @c: The character to print
  * Return: On success void.
  */
-
-int _isalpha(int c);
+int _isalpha(int c)
 {
 	if (c >= 'a' && c <= 'z')
 	|| if (c >= 'A' && c <= 'Z')

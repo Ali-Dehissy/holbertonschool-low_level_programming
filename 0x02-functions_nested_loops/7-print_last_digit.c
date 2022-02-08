@@ -10,9 +10,9 @@ int print_sign(int n)
 	{
 	_putchar((-1 * (n % 10)) + 0);
 	return (-1 * (n % 10));
-
+	}
 	else
-
+	{
 	_putchar((n % 10) + 0);
 	return (n % 10);
 	}

@@ -2,7 +2,8 @@
 #include "main.h"
 /**
  * add - prints two integers
- * @n @a @b: The character to print
+ * @a : The character to print
+ * @b : The character to print
  * Return: On success void.
  */
 int add(int a, int b)

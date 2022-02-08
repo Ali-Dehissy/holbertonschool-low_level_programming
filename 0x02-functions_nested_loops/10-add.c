@@ -5,7 +5,7 @@
  * @n @a @b: The character to print
  * Return: On success void.
  */
-int add(int a, int b);
+int add(int a, int b)
 {
 	int n;
 

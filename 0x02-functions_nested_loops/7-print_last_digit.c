@@ -4,7 +4,7 @@
  * @n: The character to print
  * Return: On success void.
  */
-int print_last_digit(int)
+int print_last_digit(int n)
 {
 	if ((n % 10) < 0)
 	{

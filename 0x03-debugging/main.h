@@ -1,10 +1,8 @@
-#ifndef main_H_
-#define main_H_
+#ifndef MAIN_H
+#define MAIN_H
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <time.hi>
 
-postitive_or_negative();
-#endif
+void positive_or_negative(int i);
+
+#endif /* MAIN_H */

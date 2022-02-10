@@ -5,7 +5,7 @@
  * @c : integer
  * Return: On success void.
  */
-int _isdigit(int c);
+int _isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
 	{

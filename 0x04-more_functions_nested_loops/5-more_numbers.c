@@ -4,7 +4,7 @@
  * more_numbers- looks for uppercase
  * Return: On success void.
  */
-void more_numbers(void);
+void more_numbers(void)
 {
 	int i, a;
 

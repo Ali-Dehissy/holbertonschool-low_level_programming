@@ -6,8 +6,13 @@
  */
 void print_rev(char *s)
 {
-	char rev;
+	int i, a;
 
-	rev = *s;
-	puts(rev);
+	i = strlen(*s);
+	for (i = a; i >= a; i--)
+	{
+	_putchar(i);
+	{
+	_putchar("\n");
+	}
 }

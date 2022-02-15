@@ -1,0 +1,33 @@
+#include "main.h"
+/**
+ * puts_half - half of string
+ *@str : pointer
+ * Return: Always 0.
+ */
+void puts_half(char *str)
+{
+	int a;
+	int b;
+
+	for (a = 0; str[a] != '\0'; a++)
+	{
+
+	}
+	if (a % 2 == 0)
+	{
+	for (b = a / 2; b < a; b++)
+	{
+	_putchar(str[b]);
+	}
+	}
+	else
+	{
+	for (b = (a + 1) / 2; b < a; b++)
+	{
+	_putchar(str[b]);
+	}
+	{
+	_putchar('\n');
+	}
+	}
+}

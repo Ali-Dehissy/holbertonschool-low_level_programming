@@ -12,7 +12,7 @@ char *cap_string(char *s)
 	int r = 13;
 	char n[] = {32, '\t', '\n', 59, 33, 63, 34, '(', ')', '{', '}', 44, 46};
 
-	for (i = 0; s[i];i++)
+	for (i = 0; s[i]; i++)
 	{
 	for (j = 0; j < r; j++)
 	{

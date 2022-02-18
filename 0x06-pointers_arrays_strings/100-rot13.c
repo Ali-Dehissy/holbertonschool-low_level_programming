@@ -9,14 +9,15 @@ char *rot13(char *a)
 {
 	int i;
 	int j;
+	char *alphabet = "abcdefghijklmnopqrstuvwxyz" ;
 	char *rot = "nopqrstuvwxyzabcdefghijklm";
 
 	for (i = 0; a[i] != '\0'; i++)
 	{
 	for (j = 0; j < 26; j++)
-	if (a[i] == rot[j])
+	if (a[i] == alphabet[j])
 	{
-
+	a[i] = rot[j];
 	}
 	}
 	return (a);

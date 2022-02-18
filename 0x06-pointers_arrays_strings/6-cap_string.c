@@ -7,21 +7,18 @@
  */
 char *cap_string(char *s)
 {
-	int a = 0;
 	int i;
+	int j;
 	int r = 13;
 	char n[] = {32, '\t', '\n', 59, 33, 63, 34, '(', ')', '{', '}', 44, 46};
 
-	while (s[a])
+	for (i = 0; s[i];i++)
 	{
-		i = 0;
-	while (i < r)
+	for (j = 0; j < r; j++)
 	{
-		if ((a == 0 || s[a - 1] == n[i]) && (s[a] >= 97 && s[a] <= 122))
-			s[a] -= 32;
-		i++;
+		if ((i == 0 || s[i - 1] == n[j]) && (s[i] >= 97 && s[i] <= 122))
+			s[i] -= 32;
 	}
-		a++;
 	}
 	return (s);
 }

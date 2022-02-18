@@ -8,29 +8,20 @@
 char *cap_string(char *s)
 {
 	int i;
-	char  array[] ={' ', ',', ';', '.', '!', '?', '"',
+	int j;
+	char  array[] = {' ', ',', ';', '.', '!', '?', '"',
 	'(', ')', '{', '}', '\t', '\n'};
 
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; s[i] ; i++)
 	{
-	if (i == 0)
+	for (j = 0; j < 13; j++)
 	{
-
-	if (s[i] >= 'a' && s[i] <= 'z')
+	if ((i == 0 || s[i - 1] == array[i]) && (s[i] <= 97 && s[i] <= 122))
 	{
-	s[i] = s[i] - 32;
-	}
-	else if  (s[i] == array[20])
-	{
-	i++;
-	if (s[i] >= 'a' && s[i] <= 'z')
-	{
-	s[i] = s[i] - 32;
+	s[i] -= 32;
 	}
 	}
 	}
-	}
-
 	return (s);
 }

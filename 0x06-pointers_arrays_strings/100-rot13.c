@@ -9,7 +9,7 @@ char *rot13(char *a)
 {
 	int i;
 	int j;
-	char *alphabet = "abcdefghijklmnopqrstuvwxyz" ;
+	char *alphabet = "abcdefghijklmnopqrstuvwxyz";
 	char *rot = "nopqrstuvwxyzabcdefghijklm";
 
 	for (i = 0; a[i] != '\0'; i++)

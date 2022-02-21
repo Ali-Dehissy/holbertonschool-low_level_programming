@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * *_memcpy - copies bytes from n
+ * _memcpy - copies bytes from n
  *@dest : pointer
  *@src : pointer
  *@n : positive integer
@@ -16,5 +16,5 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 	dest[j] = src[j];
 	}
 
-	return (0);
+	return (dest);
 }

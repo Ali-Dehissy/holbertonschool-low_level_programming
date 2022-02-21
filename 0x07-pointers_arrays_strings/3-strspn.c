@@ -28,7 +28,7 @@ unsigned int _strspn(char *s, char *accept)
 		pres = 0;
 	}
 	}
-	if (pres == 0 & len > 0)
+	if (pres == 0 && len > 0)
 		break;
 	}
 	return (len);

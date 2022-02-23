@@ -1,0 +1,17 @@
+#include "main.h"
+#include <stdio.h>
+/**
+ * factorial - factor of
+ *@n : integer
+ * Return: Always 0.
+ */
+int factorial(int n)
+{
+	if (n < 0)
+	{
+	return (-1);
+	}
+	else
+	return (1);
+}
+

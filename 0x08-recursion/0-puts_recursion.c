@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * _puts_recursion - puts
  *@s : pointer
@@ -6,18 +7,14 @@
  */
 void _puts_recursion(char *s)
 {
-	int i;
-
-	for (i = 0; s[i] != '\0'; i++)
+	if (*s == '\0')
 	{
-	_putchar(s[i]);
+	_putchar('\n');
 	}
-	_putchar('\0');
+	else
+	{
+	_putchar(*s);
+	_puts_recursion(s + 1);
+	}
 }
-int main ()
-{
-	
-	_puts_recursion(char *s);
-	
-	return (0);
-}
+

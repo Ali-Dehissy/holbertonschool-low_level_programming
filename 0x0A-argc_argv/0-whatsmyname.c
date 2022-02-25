@@ -3,7 +3,7 @@
 /**
  * main - argv[0]
  *@argc : integer
- *@argv : pointer of array 
+ *@argv : pointer of array
  * Return: Always 0.
  */
 int main(int argc, char *argv[])

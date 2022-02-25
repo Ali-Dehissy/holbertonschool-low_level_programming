@@ -4,7 +4,7 @@
  * main - multiplication
  *@argc : integer
  *@argv : pointer of arrays
- * Return: Always 0.
+ * Return: Always 1.
  */
 int main(int argc, char *argv[])
 {

@@ -15,10 +15,11 @@ int main(int argc, char *argv[])
 	{
 		printf("0\n");
 	}
+	else
 	{
 	for (i = 1; i < argc; i++)
 	{
-		if (isdigit(*argv[i] == 0))
+		if (!isdigit(*argv[i]))
 	{
 		printf("Error\n");
 		return (1);

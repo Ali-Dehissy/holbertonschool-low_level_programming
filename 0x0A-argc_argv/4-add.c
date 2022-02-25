@@ -1,5 +1,6 @@
 #include "main.h"
 #include <ctype.h>
+#include <string.h>
 /**
  * main - multiplication
  *@argc : integer
@@ -10,8 +11,9 @@ int main(int argc, char *argv[])
 {
 	int sum = 0;
 	int i;
+	int k = 0;
 
-	if (argc <= 2)
+	if (argc == 1)
 	{
 		printf("0\n");
 	}
@@ -19,7 +21,9 @@ int main(int argc, char *argv[])
 	{
 	for (i = 1; i < argc; i++)
 	{
-		if (!isdigit(*argv[i]))
+	for (k = 0; k < (int)strlen(argv[i]); k++)
+	{
+	if (isdigit(argv[i][k]) == 0)
 		{
 		printf("Error\n");
 		return (1);
@@ -31,5 +35,7 @@ int main(int argc, char *argv[])
 	}
 		printf("%d\n", sum);
 	}
-	return (1);
+	}
+	return (0);
+
 }

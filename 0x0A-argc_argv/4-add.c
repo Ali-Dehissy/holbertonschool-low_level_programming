@@ -1,16 +1,19 @@
-#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 #include <ctype.h>
+#include <string.h>
 /**
- * main - multiplication
- *@argc : integer
- *@argv : pointer of arrays
- * Return: Always 1.
+ * main - multiplies two integers
+ * @argc : counter
+ * @argv: array
+ * Return: 0 (Success)
  */
 int main(int argc, char *argv[])
 {
 	int sum = 0;
-	int i;
-	if (argc <= 2)
+	int i, j, l;
+
+	if (argc == 1)
 	{
 		printf("0\n");
 	}
@@ -18,19 +21,19 @@ int main(int argc, char *argv[])
 	{
 	for (i = 1; i < argc; i++)
 	{
-		if (!isdigit(*argv[i]))
-		{
-		printf("Error\n");
-		return (1);
-		}
-	else
+		l = strlen(argv[i]);
+
+	for (j = 0; j < l; j++)
 	{
+		if (isdigit(argv[i][j]) == 0)
+	{
+		printf("Error\n");
+	return (1);
+	}
+	}
 		sum += atoi(argv[i]);
 	}
-	}
-		printf("%d\n", sum);	
 		printf("%d\n", sum);
 	}
 	return (0);
-	return (1);
 }

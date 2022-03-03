@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
 /**
  * *string_nconcat - concatenate
  *@s1 : pointer
@@ -27,7 +25,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (k < strlen(s1))
 		a[k] = s1[k];
 	else
-		a[i] = s2[k - strlen(s1)];
+		a[k] = s2[k - strlen(s1)];
 	}
 	a[k] = '\0';
 	return (a);

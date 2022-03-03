@@ -3,13 +3,13 @@
 #include <stdlib.h>
 #include <limits.h>
 /**
- * *malloc checked - malloc check
+ * *malloc_checked - malloc check
  *@b : pointer
  * Return: Always 0.
  */
 void *malloc_checked(unsigned int b)
 {
-	int *r;
+	void *r;
 
 	r = malloc(b);
 	if (a == NULL)

@@ -1,11 +1,10 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 /**
- **array_range - array of integers
- *@min : integer
- *@max : integer
- *Return : integer
+ * array_range - array of integers
+ * @min : integer
+ * @max : integer
+ * Return: integer
  */
 int *array_range(int min, int max)
 {

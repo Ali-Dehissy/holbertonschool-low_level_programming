@@ -1,21 +1,19 @@
-#include <stdio.h>
+#include <string.h>
 #include "dog.h"
+#include <stdio.h>
+#include <stdlib.h>
 /**
- * init_dog - free data structure
- * @d : pointer
- * @name : pointer
- * @age : float
- * @owner : pointer
- * Return: void
+ * free_dog - free dog structure
+ *@d: pointer struct
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
-void init_dog(struct dog *d, char *name, float age, char *owner)
+void free_dog(dog_t *d)
 {
-	if (d != NULL)
+	if (d)
 	{
-	d->name = name;
-
-	d->age = age;
-
-	d->owner = owner;
+	free(d->name);
+	free(d->owner);
+	free(d);
 	}
 }

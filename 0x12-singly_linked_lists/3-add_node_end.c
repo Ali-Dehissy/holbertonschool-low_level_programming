@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdlib.>
 /**
  * *add_node_end - adding a new node at the end
  * @head : pointer to pointer

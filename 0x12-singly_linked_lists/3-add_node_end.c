@@ -1,5 +1,5 @@
 #include "lists.h"
-#include <stdlib.>
+#include <stdlib.h>
 /**
  * *add_node_end - adding a new node at the end
  * @head : pointer to pointer
@@ -27,6 +27,6 @@ list_t *add_node_end(list_t **head, const char *str)
 		ppt = ppt->next;
 	};
 
-	ppt->newnode;
+	ppt->next = newnode;
 	return (newnode);
 }

@@ -1,10 +1,10 @@
 #include "lists.h"
 /**
- * listint_len - returns number of elements
+ * print_listint - returns number of elements
  * @h : pointer
  * Return: nodes
 */
-size_t listint_len(const listint_t *h)
+size_t print_listint(const listint_t *h)
 {
 	unsigned int node = 0;
 

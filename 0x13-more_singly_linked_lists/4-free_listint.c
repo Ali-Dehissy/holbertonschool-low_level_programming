@@ -2,21 +2,16 @@
 /**
  * free_listint - free list
  * @head : pointer
- * Return: new nodes
+ * Return: void
 */
 void free_listint(listint_t *head)
 {
 	listint_t *a;
 
-	if (head != NULL)
-
-		a = head;
-
-	while (a->next != NULL)
+	while (head != NULL)
 	{
-		head = a->next;
-		free(a);
 		a = head;
+		head = head->next;
+		free(a);
 	}
-	free(head);
 }

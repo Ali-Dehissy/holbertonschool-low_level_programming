@@ -1,16 +1,21 @@
 #include "lists.h"
 /**
  * free_listint - free list
- * @head : pointer to pointer
+ * @head : pointer
  * Return: new nodes
 */
 void free_listint(listint_t *head)
 {
+	list_int *a;
 
-	while (head != NULL)
+	if (head != NULL)
+		a = head;
+
+	while (a->next != NULL)
 	{
-	free(head->next);
-	free(head);
-	head = head->next;
+		head = a->next;
+		free(a);
+		a = head;
 	}
+	free(head);
 }

@@ -6,8 +6,8 @@
  */
 void print_binary(unsigned long int n)
 {
-	 unsigned int i;
+	if (n > 1)
+	print_binary(n >> 1);
 
-	for (i = 1 << 11; i > 0; i >>= 1)
-        printf("%u", !!(n & i));
+	putchar((n & 1) + '0');
 }

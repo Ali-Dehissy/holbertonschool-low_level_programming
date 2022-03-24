@@ -1,4 +1,4 @@
-#include "lists.h"
+#include "main.h"
 /**
  * binary_to_uint -  convert binary to decimal
  * @b : pointer
@@ -6,19 +6,21 @@
 */
 unsigned int binary_to_uint(const char *b)
 {
-	int num = p;
-	int value = 0;
-	int base = 1;
-	int temp = num;
+	unsigned int res = 0;
 
-	while (temp)
+	if (b == NULL)
+		return (0);
+
+	while (*b)
 	{
-		int last_digit = temp % 10;
-
-		temp = temp / 10;
-		dec_value += last_digit * base;
-		base = base * 2;
+	if (*b == '1')
+		res = (res << 1) | 1;
+	else if (*b == '0')
+		res <<= 1;
+	else
+		return (0);
+		b++;
 	}
 
-	return (value);
+	return (res);
 }

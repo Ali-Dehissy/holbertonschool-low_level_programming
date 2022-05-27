@@ -8,20 +8,27 @@
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-	hash_node_t *current;
 	unsigned long int index;
+	hash_node_t *temp = NULL;
 
-	if (!ht || !key)
+	if (ht == NULL || key == NULL || *key == '\0')
 		return (NULL);
 
 	index = key_index((const unsigned char *)key, ht->size);
-
-	current = ht->array[index];
-	while (current != NULL)
+	/* if index is greater that array's size */
+	if (index >= ht->size)
+		return (NULL);
+	/* if and index in the array is no null */
+	if (ht->array[index] != NULL)
 	{
-		if (strcmp(current->key, key) == 0)
-			return (current->value);
-		current = current->next;
+		temp = ht->array[index];
+		while (temp != NULL)
+		{
+			/* compare key to check for collision */
+			if (strcmp(key, temp->key) == 0)
+				return (temp->value);
+			temp = temp->next;
+		}
 	}
 	return (NULL);
 }

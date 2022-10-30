@@ -5,23 +5,21 @@
  * @size: The hash_table size
  * Return: pointer to a hash table
  */
-hash_table_t *hash_table_create(unsigned long int size)
-{
-	hash_table_t *pt;
-	unsigned long int i;
+hash_table_t * hash_table_create(unsigned long int size) {
+   hash_table_t * newtable;
+   unsigned long int j;
 
-	pt = (hash_table_t *)malloc(sizeof(hash_table_t));
-	if (pt == NULL)
-		return (NULL);
-	pt->size = size;
-	pt->array = (hash_node_t **)malloc(
-		sizeof(hash_node_t *) * size);
-	if (pt->array == NULL)
-		return (NULL);
-	for (i = 0; i < size; i++)
-	{
-		pt->size = size;
-		pt->array[i] = NULL;
-	}
-	return (pt);
+   newtable = (hash_table_t * ) malloc(sizeof(hash_table_t));
+   if (newtable == NULL)
+      return (NULL);
+   newtable -> size = size;
+   newtable -> array = (hash_node_t ** ) malloc(
+      sizeof(hash_node_t * ) * size);
+   if (newtable -> array == NULL)
+      return (NULL);
+   for (j = 0; j < size; j++) {
+      newtable -> size = size;
+      newtable -> array[j] = NULL;
+   }
+   return (newtable);
 }

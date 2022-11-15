@@ -22,7 +22,7 @@ void hash_table_delete(hash_table_t *ht)
 			tempo = top->next;
 			free(top->key);
 			free(top->value);
-			free(hetopad);
+			free(top);
 			top = tempo;
 		}
 	}

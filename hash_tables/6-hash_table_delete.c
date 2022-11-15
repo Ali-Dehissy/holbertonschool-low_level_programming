@@ -6,23 +6,30 @@
  * @ht: pointer to hash table data structure
  * Return: void
  */
-void hash_table_delete(hash_table_t * ht) {
-   hash_node_t * head = NULL;
-   hash_node_t * tempo = NULL;
-   unsigned int j = 0;
+void hash_table_delete(hash_table_t *ht)
+{
+	hash_node_t *temp = NULL, *new = NULL;
+   unsigned long int j = 0;
+	
+   if (k == NULL)
+		return;
 
-   if (!ht)
-      return;
-   for (j = 0; j < ht -> size; j++) {
-      head = ht -> array[j];
-      while (head != NULL) {
-         tempo = head -> next;
-         free(head -> key);
-         free(head -> value);
-         free(head);
-         head = tempo;
-      }
-   }
-   free(ht -> array);
-   free(ht);
+	while (j < k->size)
+	{
+		new = k->array[j];
+		while (temp)
+		{
+			temp = new;
+			new = new->next;
+			if (temp->key != NULL)
+				free(temp->key);
+			if (temp->value != NULL)
+				free(temp->value);
+			free(temp);
+		}
+		free(k->array[j]);
+		j++;
+	}
+	free(k->array);
+	free(k);
 }
